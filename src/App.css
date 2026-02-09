@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.app-container {
+    height: 100vh;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root {
+    height: 100%;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Chat specific styles */
+.message-container {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+
+.user-list {
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        background: white;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
 }
